@@ -1,0 +1,21 @@
+.item {
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  background-color: var(--grey-color);
+  border: solid 1px #fff;
+}
+.text {
+  padding: 0;
+  margin: 0;
+}
+.deleteBtn {
+  margin: 0;
+  border: 0;
+  outline: 0;
+}
+.deleteBtn:hover {
+  background-color: red;
+  box-shadow: var(--grey-shadow);
+  color: #fff;
+}
