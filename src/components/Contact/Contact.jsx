@@ -1,11 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import s from './Contact.module.css';
+import React from "react";
+import PropTypes from "prop-types";
+import s from "./Contact.module.css";
 
-const Contact = ({ contact, onClick }) => {
+export default function Contact({ contact, onClick }) {
   return (
     <li className={s.item}>
-      <p className={s.text}>{contact.name + ': ' + contact.number}</p>
+      <p className={s.text}>{contact.name + ": " + contact.number}</p>
       <button
         className={s.deleteBtn}
         type="button"
@@ -16,7 +16,8 @@ const Contact = ({ contact, onClick }) => {
       </button>
     </li>
   );
-};
+}
+
 Contact.propTypes = {
   contact: PropTypes.shape({
     name: PropTypes.string.isRequired,
@@ -25,4 +26,3 @@ Contact.propTypes = {
   }),
   onClick: PropTypes.func.isRequired,
 };
-export default Contact;
