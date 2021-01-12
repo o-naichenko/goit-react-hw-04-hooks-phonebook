@@ -59,7 +59,7 @@ export default function App({ value, newContact }) {
       <h2 className={s.header}>Contacts</h2>
       <Filter onChange={setFilterValue} />
       <ContactList
-        contacts={filter.length === 0 ? contacts : filterContacts()}
+        contacts={filterContacts()}
         onClick={deleteContact}
       />
     </div>
