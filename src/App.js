@@ -5,8 +5,7 @@ import s from "./App.module.css";
 import ContactForm from "./components/ContactForm";
 import Filter from "./components/Filter";
 import ContactList from "./components/ContactList";
-
-export default function App({ value, newContact }) {
+export default function App() {
   const [contacts, setContacts] = useState([]);
   const [filter, setFilter] = useState("");
 
