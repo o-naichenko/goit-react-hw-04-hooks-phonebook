@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
 import s from "./App.module.css";
-import ContactForm from "./components/Contact-form";
+import ContactForm from "./components/ContactForm";
 import Filter from "./components/Filter";
-import ContactList from "./components/Contact-list";
+import ContactList from "./components/ContactList";
 
 export default function App({ value, newContact }) {
   const [contacts, setContacts] = useState([]);
@@ -58,10 +58,7 @@ export default function App({ value, newContact }) {
 
       <h2 className={s.header}>Contacts</h2>
       <Filter onChange={setFilterValue} />
-      <ContactList
-        contacts={filterContacts()}
-        onClick={deleteContact}
-      />
+      <ContactList contacts={filterContacts()} onClick={deleteContact} />
     </div>
   );
 }

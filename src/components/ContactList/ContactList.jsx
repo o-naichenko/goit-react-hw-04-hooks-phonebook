@@ -1,12 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import s from './Contact-list.module.css';
-import Contact from '../Contact';
+import React from "react";
+import PropTypes from "prop-types";
+import s from "./ContactList.module.css";
+import Contact from "../Contact";
 
 const ContactList = ({ contacts, onClick }) => {
   return (
     <ul className={s.list}>
-      {contacts.map(contact => (
+      {contacts.map((contact) => (
         <Contact key={contact.id} contact={contact} onClick={onClick} />
       ))}
     </ul>
